@@ -21,3 +21,7 @@ This is a test automation project for finding Vehicle details online.
 - Assertions Library used: Hamcrest 
 
 - Dependency Injection used: Picocontainer
+
+- Apache POI Library for excel reading
+
+- Cucumber Java 8 (Stepdefinitions in Lambda)
