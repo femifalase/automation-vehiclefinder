@@ -4,7 +4,7 @@ import com.richard.cordbyte.base.Driver;
 import com.richard.cordbyte.models.Document;
 import com.richard.cordbyte.models.Vehicle;
 import com.richard.cordbyte.pages.ConfirmVehiclePage;
-import com.richard.cordbyte.pages.FirstPage;
+import com.richard.cordbyte.pages.HomePage;
 import com.richard.cordbyte.pages.VehicleEnquiryPage;
 import com.richard.cordbyte.service.FileService;
 import com.richard.cordbyte.utils.ReadFileData;
@@ -18,7 +18,7 @@ import java.util.List;
 public class SeleniumVehicleTest {
 
     private Driver driver;
-    private FirstPage firstPage;
+    private HomePage homePage;
     private FileService fileService;
     private VehicleEnquiryPage vehicleEnquiryPage;
     private ConfirmVehiclePage confirmVehiclePage;
@@ -30,7 +30,7 @@ public class SeleniumVehicleTest {
         this.fileService = new FileService();
         this.driver = new Driver();
 
-        this.firstPage = new FirstPage(this.driver);
+        this.homePage = new HomePage(this.driver);
         this.vehicleEnquiryPage = new VehicleEnquiryPage(this.driver);
         this.confirmVehiclePage = new ConfirmVehiclePage(this.driver);
 
@@ -46,9 +46,9 @@ public class SeleniumVehicleTest {
 
         for (Vehicle vehicle : vehicles) {
 
-            firstPage.navigateToPage(homepage);
-            firstPage.checkPageTitle("Get vehicle information from DVLA - GOV.UK");
-            firstPage.click_btn_start();
+            homePage.navigateToPage(homepage);
+            homePage.checkPageTitle("Get vehicle information from DVLA - GOV.UK");
+            homePage.click_btn_start();
 
             vehicleEnquiryPage.checkPageTitle("Check if a vehicle is taxed and has an MOT");
             vehicleEnquiryPage.enter_registration(vehicle.getRegMark());
