@@ -16,4 +16,12 @@ This is a test automation project for finding Vehicle details online.
    - Singleton pattern for Webdriver (Driver) class
    - Page Object Model
            
+- Logging Framework used: Log4J
 
+- Assertions Library used: Hamcrest 
+
+- Dependency Injection used: Picocontainer
+
+- Apache POI Library for excel reading
+
+- Cucumber Java 8 (Stepdefinitions in Lambda)
