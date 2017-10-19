@@ -7,7 +7,7 @@ This is a test automation project for finding Vehicle details online.
    - Chrome
    - IE
 
-- The Test Junit runner classes: .\src\test\java\runners
+- Junit Test runner classes: .\src\test\java\runners
    - AllCSVTest.java :- Running directory scanner to list all CSV files in a directory. default location: .\files
    - AllDirectoryDocsTest :- Running directory scanner to list all files types in a directory. default location: .\files
    - AllExcelTestTest :- Running directory scanner to list all Excel files in a directory. default location: .\files
