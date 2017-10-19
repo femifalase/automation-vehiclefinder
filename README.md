@@ -2,7 +2,7 @@
 
 This is a test automation project for finding Vehicle details online.
 
-- Browsers configured: (Configuration can be changed inside .\src\main\resources\config.properties
+- Browsers configured: (Configuration can be changed inside .\src\main\resources\config.properties)
    - Firefox (Default)
    - Chrome
    - IE
