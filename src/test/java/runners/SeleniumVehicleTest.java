@@ -50,7 +50,6 @@ public class SeleniumVehicleTest {
             homePage.checkPageTitle("Get vehicle information from DVLA - GOV.UK");
             homePage.click_btn_start();
 
-            vehicleEnquiryPage.checkPageTitle("Check if a vehicle is taxed and has an MOT");
             vehicleEnquiryPage.enter_registration(vehicle.getRegMark());
             vehicleEnquiryPage.click_continue();
 
