@@ -10,11 +10,11 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
-    private static WebDriver driver = null;
+    private static WebDriver driver;
 
     private final static String driverPath = "drivers/";
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
 
         if (driver == null) {
 
@@ -41,22 +41,27 @@ public class Driver {
 
     }
 
+    public static void quitBrowser(){
+        driver.quit();
+        driver = null;
+    }
 
-    private void initIEExplorer() {
+
+    private static void initIEExplorer() {
         System.setProperty("webdriver.ie.driver", driverPath + "IEDriverServer.exe");
         driver = new InternetExplorerDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
-    private void initChome() {
+    private static void initChome() {
         System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
-    private void initFirefox() {
+    private static void initFirefox() {
         System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().window().maximize();

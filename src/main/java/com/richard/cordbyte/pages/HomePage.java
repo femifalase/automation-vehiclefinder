@@ -13,11 +13,6 @@ public class HomePage extends BasePage {
 
     private final Logger LOG = LoggerFactory.getLogger(BasePage.class);
 
-    public HomePage(Driver driver) {
-        super(driver);
-    }
-
-
     public void click_btn_start() {
         btn_start.click();
     }

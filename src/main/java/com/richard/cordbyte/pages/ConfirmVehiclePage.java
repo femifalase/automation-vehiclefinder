@@ -12,8 +12,6 @@ import static org.hamcrest.core.Is.is;
 
 public class ConfirmVehiclePage extends BasePage {
 
-    private WebDriver driver;
-
     @FindBy(xpath = "//span[@class='reg-mark']")
     private WebElement txt_reg;
 
@@ -24,10 +22,6 @@ public class ConfirmVehiclePage extends BasePage {
     private WebElement txt_colour;
 
     private final Logger LOG = LoggerFactory.getLogger(BasePage.class);
-
-    public ConfirmVehiclePage(Driver driver) {
-        super(driver);
-    }
 
     public void confirmRegMark(String regMark) {
         LOG.info("Vehicle Registration number - " + regMark);

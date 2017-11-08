@@ -10,22 +10,18 @@ import org.openqa.selenium.WebDriver;
 
 public class ScenarioHook {
 
-    private WebDriver driver;
-
-    public ScenarioHook(Driver driver) {
-        this.driver = driver.getDriver();
-    }
 
     @Before
     public void beforeScenario() {
-
+        Driver.getDriver();
     }
 
 
     @After
     public void afterScenario(Scenario scenario) {
-        final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+        final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
         scenario.embed(screenshot, "image/png");
+        Driver.quitBrowser();
 
     }
 

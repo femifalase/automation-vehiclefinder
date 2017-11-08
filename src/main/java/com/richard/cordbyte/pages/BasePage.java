@@ -9,14 +9,14 @@ import org.slf4j.LoggerFactory;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
-public class BasePage {
+public abstract class BasePage {
 
     protected WebDriver driver;
 
     private final Logger LOG = LoggerFactory.getLogger(BasePage.class);
 
-    public BasePage(Driver driver) {
-        this.driver = driver.getDriver();
+    public BasePage() {
+        this.driver = Driver.getDriver();
         PageFactory.initElements(this.driver, this);
     }
 

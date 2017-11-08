@@ -17,10 +17,6 @@ public class VehicleEnquiryPage extends BasePage {
 
     private final Logger LOG = LoggerFactory.getLogger(BasePage.class);
 
-    public VehicleEnquiryPage(Driver driver) {
-        super(driver);
-    }
-
     public void enter_registration(String reg) {
         input_vrm.sendKeys(reg);
     }

@@ -29,7 +29,6 @@ public class VehicleInfoSteps implements En {
 
             vehicle = ReadFileData.getExcelData(excelData.getPath(), Integer.parseInt(vehicleRow));
 
-            vehicleEnquiryPage.checkPageTitle("Check if a vehicle is taxed and has an MOT");
             vehicleEnquiryPage.enter_registration(vehicle.getRegMark());
             vehicleEnquiryPage.click_continue();
 

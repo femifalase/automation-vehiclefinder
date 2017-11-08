@@ -30,9 +30,9 @@ public class SeleniumVehicleTest {
         this.fileService = new FileService();
         this.driver = new Driver();
 
-        this.homePage = new HomePage(this.driver);
-        this.vehicleEnquiryPage = new VehicleEnquiryPage(this.driver);
-        this.confirmVehiclePage = new ConfirmVehiclePage(this.driver);
+        this.homePage = new HomePage();
+        this.vehicleEnquiryPage = new VehicleEnquiryPage();
+        this.confirmVehiclePage = new ConfirmVehiclePage();
 
     }
 
