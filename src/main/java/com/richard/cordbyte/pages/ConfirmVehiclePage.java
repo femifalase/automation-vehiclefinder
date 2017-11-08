@@ -1,7 +1,5 @@
 package com.richard.cordbyte.pages;
 
-import com.richard.cordbyte.base.Driver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;

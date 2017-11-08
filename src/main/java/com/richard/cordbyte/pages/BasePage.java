@@ -15,8 +15,8 @@ public abstract class BasePage {
 
     private final Logger LOG = LoggerFactory.getLogger(BasePage.class);
 
-    public BasePage() {
-        this.driver = Driver.getDriver();
+    BasePage() {
+        this.driver = Driver.startBrowser();
         PageFactory.initElements(this.driver, this);
     }
 

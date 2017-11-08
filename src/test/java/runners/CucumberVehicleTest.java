@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         glue = {"com.richard.cordbyte.steps", "com.richard.cordbyte.hooks"},
         tags = "@Vehicle",
         plugin = {"pretty", "html:target/reports", "json:target/reports/cucumber.json", "junit:target/reports/cucumber.xml"}
-        )
+)
 public class CucumberVehicleTest {
 
 }

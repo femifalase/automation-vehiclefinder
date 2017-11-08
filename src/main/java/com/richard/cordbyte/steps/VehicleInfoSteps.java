@@ -19,10 +19,12 @@ public class VehicleInfoSteps implements En {
         Document excelData = fileService.getExelDocsFromDirectory("files").get(0);
 
         Given("^a user opens the vehicle (.*)$", (String page) -> {
+
             String propUrl = ReadFileData.getProperties().getProperty(page);
             homePage.navigateToPage(propUrl);
             homePage.checkPageTitle("Get vehicle information from DVLA - GOV.UK");
             homePage.click_btn_start();
+
         });
 
         When("^the user enters registration number for (.*)$", (String vehicleRow) -> {

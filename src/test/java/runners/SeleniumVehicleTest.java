@@ -17,7 +17,6 @@ import java.util.List;
 
 public class SeleniumVehicleTest {
 
-    private Driver driver;
     private HomePage homePage;
     private FileService fileService;
     private VehicleEnquiryPage vehicleEnquiryPage;
@@ -28,7 +27,6 @@ public class SeleniumVehicleTest {
     public void setUp() {
 
         this.fileService = new FileService();
-        this.driver = new Driver();
 
         this.homePage = new HomePage();
         this.vehicleEnquiryPage = new VehicleEnquiryPage();
@@ -63,6 +61,6 @@ public class SeleniumVehicleTest {
     @After
     public void tearDown() {
 
-        driver.getDriver().quit();
+        Driver.quitBrowser();
     }
 }

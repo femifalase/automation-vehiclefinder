@@ -14,7 +14,7 @@ public class Driver {
 
     private final static String driverPath = "drivers/";
 
-    public static WebDriver getDriver() {
+    public static WebDriver startBrowser() {
 
         if (driver == null) {
 
