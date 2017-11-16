@@ -48,14 +48,13 @@ public class FileService {
 
         File directory = new File(path);
         List<Document> csvDocs = new ArrayList<Document>();
-        File[] files = directory.listFiles();
+
+        File[] files = directory.listFiles((dir, name) -> name.endsWith(".csv"));
 
         if (files != null) {
             for (File file : files) {
-                String fileExt = getFileExt(file.getAbsolutePath());
-                if (file.isFile() && fileExt.equalsIgnoreCase("csv")) {
-                    csvDocs.add(createDoc(file));
-                }
+
+                csvDocs.add(createDoc(file));
             }
         }
         return csvDocs;

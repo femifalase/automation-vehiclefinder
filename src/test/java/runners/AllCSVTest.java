@@ -9,7 +9,6 @@ import java.util.List;
 public class AllCSVTest {
 
 
-
     @Test
     public void getCSVFiles() {
 
@@ -17,9 +16,7 @@ public class AllCSVTest {
 
         List<Document> docs = fileService.getCSVDocsFromDirectory("files");
 
-        for (Document doc : docs) {
-            System.out.println(doc.toString());
-        }
+        docs.stream().forEach(System.out::println);
 
     }
 }

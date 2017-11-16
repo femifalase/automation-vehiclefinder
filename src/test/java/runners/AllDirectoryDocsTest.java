@@ -9,18 +9,14 @@ import java.util.List;
 public class AllDirectoryDocsTest {
 
 
-
-
     @Test
-    public void getDirectoryFiles(){
+    public void getDirectoryFiles() {
 
         FileService fileService = new FileService();
 
         List<Document> docs = fileService.getAllDocsFromDirectory("files");
 
-        for (Document doc : docs) {
-            System.out.println(doc.toString());
-        }
+        docs.stream().forEach(System.out::println);
 
 
     }

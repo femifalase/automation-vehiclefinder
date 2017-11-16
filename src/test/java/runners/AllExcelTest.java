@@ -16,9 +16,7 @@ public class AllExcelTest {
 
         List<Document> docs = fileService.getExelDocsFromDirectory("files");
 
-        for (Document doc : docs) {
-            System.out.println(doc.toString());
-        }
+        docs.stream().forEach(System.out::println);
 
 
     }
